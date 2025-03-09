@@ -1,0 +1,12 @@
+<?xml version='1.0' ?>
+<launch>
+
+  <!-- Modified version of main_turtlebot3_lab.launch.xml from turtlebot3_gazebo package -->
+
+  <!-- Launches Robot State Publisher -->
+  <include file="$(find-pkg-share turtlebot3_realrobot)/launch/robot_state_publisher.launch.py"/>
+
+  <!-- Launch RViz with pre-configured file -->
+  <include file="$(find-pkg-share turtlebot3_realrobot)/launch/rviz.launch.py"/>
+
+</launch>

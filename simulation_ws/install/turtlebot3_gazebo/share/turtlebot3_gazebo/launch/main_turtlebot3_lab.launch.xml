@@ -1,0 +1,18 @@
+<?xml version='1.0' ?>
+<launch>
+
+  <!-- Launches World now independently form spawning robot -->
+  <include file="$(find-pkg-share turtlebot3_gazebo)/launch/start_turtlebot3_world.launch.py"/>
+
+  <timer period="15">
+    <!-- Launches Robot State Publisher -->
+    <include file="$(find-pkg-share turtlebot3_gazebo)/launch/robot_state_publisher.launch.py"/>
+
+    <!-- Spawns one turtlebot3 in the lab world -->
+    <include file="$(find-pkg-share turtlebot3_gazebo)/launch/spawn_turtlebot3.launch.py"/>
+
+    <!-- Launch RViz with pre-configured file -->
+    <include file="$(find-pkg-share turtlebot3_gazebo)/launch/rviz.launch.py"/>
+  </timer>
+
+</launch>

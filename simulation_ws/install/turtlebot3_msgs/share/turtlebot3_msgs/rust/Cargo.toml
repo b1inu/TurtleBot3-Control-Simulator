@@ -1,0 +1,15 @@
+[package]
+name = "turtlebot3_msgs"
+version = "2.2.3"
+edition = "2021"
+
+[dependencies]
+rosidl_runtime_rs = "0.3"
+serde = { version = "1", optional = true, features = ["derive"] }
+std_msgs = "*"
+unique_identifier_msgs = "*"
+action_msgs = "*"
+builtin_interfaces = "*"
+
+[features]
+serde = ['dep:serde', 'rosidl_runtime_rs/serde', 'std_msgs/serde', 'unique_identifier_msgs/serde', 'action_msgs/serde', 'builtin_interfaces/serde']
